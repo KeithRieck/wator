@@ -9,7 +9,7 @@ import { StatsPanel } from '../ui/StatsPanel';
 import { HistoryChart } from '../ui/HistoryChart';
 
 /** Fixed pixel size for speed buttons. */
-const SPEED_BUTTON_WIDTH = 60;
+const SPEED_BUTTON_WIDTH = 40;
 const SPEED_BUTTON_HEIGHT = 34;
 
 /** Fixed pixel size for action buttons. */

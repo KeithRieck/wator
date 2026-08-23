@@ -1,4 +1,4 @@
-Hosted at:  https://keithrieck.github.io/wator/ox_alpha/index.html
+Hosted at:  https://keithrieck.github.io/wator/ox_alpha/dist/index.html
 
 Things to record on each experiment:
 * Number of tokens expended on each major step.
