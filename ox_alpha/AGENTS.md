@@ -20,6 +20,15 @@
     * target = ES2020
     * module = ESNext
 
+## Unit testing
+* Every non-UI class must have a corresponding Vitest unit test file.
+    * A class is non-UI if it does not import Phaser, extend a Phaser class, or draw to the screen (e.g., engines, models, services, utilities).
+    * UI classes (scenes, renderers, widgets) are verified manually or via integration checks instead; do not unit test them.
+* Test files live next to the code they test and use the `.test.ts` suffix (e.g., `src/simulation/WatorSimulation.test.ts`).
+* Tests must not require a browser, canvas, or WebGL to run; if a non-UI class depends on browser globals, inject them or mock them.
+* Run tests with `npx vitest run`; all tests must pass before a change is considered complete.
+* When implementing an OpenSpec change, add or update unit tests for every non-UI class the change touches, covering each scenario in the change's `spec.md`.
+
 ## File changes and git
 * When deleting a file in a directory managed by git, always use `git rm` for the deletion.
 * When moving or renaming a file (or directory) in a directory managed by git, always use `git mv` for the operation.

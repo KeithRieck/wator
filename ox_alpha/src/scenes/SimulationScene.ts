@@ -87,6 +87,9 @@ export class SimulationScene extends getPhaser().Scene {
     this.relayout();
   }
 
+  /** Last terminal state seen by the update loop, for edge-triggered refresh. */
+  private lastTerminal: boolean = false;
+
   /**
    * Frame update: accumulates elapsed time and advances whole chronons at
    * the selected speed. No catch-up compensation is performed; throttled
@@ -107,6 +110,13 @@ export class SimulationScene extends getPhaser().Scene {
           break;
         }
       }
+    }
+    // Edge-triggered control refresh so extinction reached via Step (or any
+    // path outside this loop) immediately locks Play and Step.
+    const terminal: boolean = this.simulation.isTerminal();
+    if (terminal !== this.lastTerminal) {
+      this.lastTerminal = terminal;
+      this.refreshControlStates();
     }
     this.render();
   }

@@ -18,7 +18,7 @@
 
 - [x] 3.1 Create `src/main.ts` configuring `Phaser.Game` (Scale.RESIZE full-window, scene registration) and verify the game canvas fills the browser window
 - [x] 3.2 Implement `BootScene` that creates the simulation and starts `SimulationScene`; verify launch goes straight to a running simulation at 10x with no landing screen (wator-ui Requirement 7)
-- [ ] 3.3 Implement `SimulationScene.update` accumulator loop mapping speed value to chronons/sec (1/5/10/30/60) with no catch-up behavior; verify observed step rates match selected speeds using chronon counter timing
+- [x] 3.3 Implement `SimulationScene.update` accumulator loop mapping speed value to chronons/sec (1/5/10/30/60) with no catch-up behavior; verify observed step rates match selected speeds using chronon counter timing
 
 ## 4. Rendering and UI helpers
 
@@ -26,13 +26,13 @@
 - [x] 4.2 Implement layout function computing stats/world/controls/chart rectangles with wide layout (stats left, world center, controls right, chart bottom) and narrow reflow preserving world aspect ratio per wator-ui Requirements 3–4; verify at desktop width and iPad mini viewport (744x1133 CSS px), including a live resize keeping grid dimensions unchanged
 - [x] 4.3 Implement stats panel showing Chronon, Fish, Sharks, Status with live values; verify counts match simulation state during a run
 - [x] 4.4 Implement Phaser-native button helper (hit area, hover, disabled visual state) and use it for controls; verify pointer interaction works over the canvas
-- [ ] 4.5 Implement speed row (`1x`,`5x`,`10x`,`30x`,`60x` horizontal) and action rows (Play/Pause, Step, Reset — one per row) with running/paused/terminal enablement rules per wator-ui Requirements 5–6 and 8; verify live speed change while running, paused speed change not resuming, Step disabled while running, single-step while paused, and Reset producing a fresh running world at chronon 0 with cleared history
+- [x] 4.5 Implement speed row (`1x`,`5x`,`10x`,`30x`,`60x` horizontal) and action rows (Play/Pause, Step, Reset — one per row) with running/paused/terminal enablement rules per wator-ui Requirements 5–6 and 8; verify live speed change while running, paused speed change not resuming, Step disabled while running, single-step while paused, and Reset producing a fresh running world at chronon 0 with cleared history
 - [x] 4.6 Implement population history chart across the bottom: green/blue lines matching world colors, auto-scaled y-axis, no titles or labels per wator-ui Requirement 9; verify lines track populations over a several-hundred-chronon run
 
 ## 5. PWA packaging
 
-- [ ] 5.1 Create `manifest.webmanifest` (name, icons, display standalone) and generate 192px/512px icons drawing blue and green circles suggesting shark and fish on a water background; verify manifest loads without console errors
-- [ ] 5.2 Implement `sw.js` precaching same-origin build output with cache-first serving; register it from the app entry; verify second load serves from cache with the network throttled/offline for same-origin assets (CDN Phaser may require network per wator-app-shell Requirement 6)
+- [x] 5.1 Create `manifest.webmanifest` (name, icons, display standalone) and generate 192px/512px icons drawing blue and green circles suggesting shark and fish on a water background; verify manifest loads without console errors
+- [x] 5.2 Implement `sw.js` precaching same-origin build output with cache-first serving; register it from the app entry; verify second load serves from cache with the network throttled/offline for same-origin assets (CDN Phaser may require network per wator-app-shell Requirement 6)
 
 ## 6. Integration verification
 

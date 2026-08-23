@@ -40,4 +40,19 @@ function startGame(): void {
   (window as unknown as { __game?: unknown }).__game = game;
 }
 
+/**
+ * Registers the service worker for PWA support. Registration is
+ * best-effort: failures (e.g., unsupported browsers, non-secure contexts)
+ * are logged and ignored so the game still runs.
+ */
+function registerServiceWorker(): void {
+  if (!('serviceWorker' in navigator)) {
+    return;
+  }
+  navigator.serviceWorker.register('./sw.js').catch((error: unknown) => {
+    console.warn('Wa-Tor: service worker registration failed.', error);
+  });
+}
+
 startGame();
+registerServiceWorker();
