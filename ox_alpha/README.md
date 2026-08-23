@@ -1,4 +1,4 @@
-Hosted at:  https://keithrieck.github.io/wator/ox_alpha/index.html
+Hosted at:  https://keithrieck.github.io/wator/ox_alpha/dist/index.html
 
 # Wa-Tor simulations with Ox Alpha
 Create a browser-based [Wa-Tor](https://en.wikipedia.org/wiki/Wa-Tor) simulation that emphasizes correct predator-prey cellular automaton behavior.
