@@ -13,6 +13,7 @@
 
 ## Typescript
 * Typescript files should be built using [Vite](https://vite.dev/).
+* Unit tests should be implemented using [Vitest](https://vitest.dev/).
 * Make good use of object orientation.
 * Annotate types everywere.  Avoid using 'any'.
 * The tsconfig.json file should have the following properties:

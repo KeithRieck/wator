@@ -26,12 +26,11 @@ Once a shark has survived a certain number of chronons it may reproduce in exact
 - Provide immediate visual updates per chronon, with no movement animation.
 - Include pause/play, single-step, reset, and speed controls.
 - Show live population stats and a rolling population history chart.
-- Keep the app static-site friendly with no build step, no backend, and lightweight PWA support.
+- Keep the app static-site friendly with no backend, and lightweight PWA support.
 
 ## Non-Goals
 - No user-facing controls for grid dimensions, densities, breeding values, or shark energy values.
 - No seeded random number support.
-- No automated tests, build tooling, TypeScript, React, backend services, or server-side code.
 - No HTML or DOM controls layered over Phaser.
 - No keyboard shortcuts.
 - No world editing, painting, dragging, zooming, or cell inspection.
@@ -60,7 +59,7 @@ Once a shark has survived a certain number of chronons it may reproduce in exact
 - Default `initialSharkEnergy` is `5`.
 - Default `sharkEnergyGain` is `3`.
 - Default `sharkEnergyCostPerChronon` is `1`.
-- Default speed is `10x`.
+- Default speed is `10x`, which means 10 chronons per second.
 - Supported speed choices are `1x`, `5x`, `10x`, `30x`, and `60x`.
 - Fish are green circles.
 - Sharks are blue circles and slightly larger than fish.
@@ -70,7 +69,7 @@ Once a shark has survived a certain number of chronons it may reproduce in exact
 
 ## Acceptance Criteria
 1. WHEN the app launches, THEN the system SHALL start directly in a running Wa-Tor simulation at `10x` speed with no landing page or instruction screen.
-2. WHERE the project files are organized, THEN the system SHALL include `index.html`, `src/main.js`, `src/config.js`, `src/simulation/WatorSimulation.js`, `src/scenes/BootScene.js`, `src/scenes/SimulationScene.js`, `sw.js`, `manifest.webmanifest`, and an `assets/` directory for PWA assets.  There may be a `src/ui` directory for on-screen elements and UI helper classes.
+2. WHERE the project files are organized, THEN the system SHALL include `index.html`, `src/main.ts`, `src/config.ts`, `src/simulation/WatorSimulation.ts`, `src/scenes/BootScene.ts`, `src/scenes/SimulationScene.ts`, `sw.js`, `manifest.webmanifest`, and an `assets/` directory for PWA assets.  There may be a `src/ui` directory for on-screen elements and UI helper classes.
 3. WHEN `index.html` loads the app, THEN the system SHALL load Phaser version 4.x from a CDN script tag and SHALL load the app through ES2020 JavaScript modules.
 4. WHERE the simulation engine is implemented, THEN the system SHALL keep all Wa-Tor rules independent from Phaser APIs and Phaser scene objects.
 5. WHERE Phaser is used, THEN the system SHALL render and control the entire app window through Phaser-native scene rendering and input.
@@ -129,7 +128,6 @@ Once a shark has survived a certain number of chronons it may reproduce in exact
 
 ## Risks / Trade-offs
 - Phaser CDN loading keeps the app simple but limits guaranteed offline behavior.
-- No automated tests increases reliance on careful implementation and manual browser verification.
 - Fixed UI constants simplify v1 but require code edits for model experimentation.
 - Phaser-native UI avoids DOM overlays but requires custom button, layout, and chart handling.
 - Using `Math.random()` simplifies implementation but prevents reproducible runs.
