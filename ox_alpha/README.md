@@ -10,5 +10,8 @@ OpenRouter announced a sale on an "unreleased frontier model" with a codename of
 1. Exploration step:
     - `/openspec-explore I want to create a web app that runs the wa-tor simulation, using the requirements from  the prd-v001.md file. Source code should be in Typescript, but the app should be a static Javascript app and a progressive web application.`
     - `The resulting code should be object oriented and make good use of Typescript classes. Assume that 'entity records' means objects that are instances of classes that extend from a common entity class, e.g. Shark and Fish may be classes extending Entity.`
-2. Propose step.
+    - `Use code that is already in the src directory.  In particular, use PhaserButton.`
+2. Propose step: Generate specifications and design document.
     - `/openspec-propose`
+3. Apply step:  Generate code.
+    - `/openspec-apply-change`

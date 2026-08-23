@@ -23,3 +23,4 @@
 ## File changes and git
 * When deleting a file in a directory managed by git, always use `git rm` for the deletion.
 * When moving or renaming a file (or directory) in a directory managed by git, always use `git mv` for the operation.
+
