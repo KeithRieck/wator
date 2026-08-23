@@ -36,6 +36,6 @@
 
 ## 6. Integration verification
 
-- [ ] 6.1 Run a full session: launch → observe running simulation → pause → step → change speeds → reset → let one species go extinct or force via temporary constants → confirm terminal status, locked Play, and Reset recovery; verify every wator-ui scenario end-to-end
+- [x] 6.1 Run a full session: launch → observe running simulation → pause → step → change speeds → reset → let one species go extinct or force via temporary constants → confirm terminal status, locked Play, and Reset recovery; verify every wator-ui scenario end-to-end
 - [ ] 6.2 Verify JSDoc coverage: every class has a documentation comment and every static/public method over 8 lines is documented (wator-app-shell Requirement 7)
 - [ ] 6.3 Run final `npm run build`, deploy `dist/` contents to the GitHub Pages subpath, and verify the hosted app at `/wator/ox_alpha/` launches and runs correctly
